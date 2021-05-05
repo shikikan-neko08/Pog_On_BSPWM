@@ -1,0 +1,19 @@
+[Fog]
+main_fg                               = 292b34
+active_control_fg                     = ffffff
+secondary_fg                          = ffffff
+secondary_bg                          = 292b34
+main_bg                               = 30333d
+sidebar_and_player_bg                 = 30333d
+cover_overlay_and_shadow              = 202020
+indicator_fg_and_button_bg            = 5f5e68
+pressing_fg                           = 1a73e8
+slider_bg                             = 585e74
+sidebar_indicator_and_hover_button_bg = dedede
+scrollbar_fg_and_selected_row_bg      = 585e74
+pressing_button_fg                    = ffffff
+pressing_button_bg                    = ffffff
+selected_button                       = 95a9d9
+miscellaneous_bg                      = 292b34
+miscellaneous_hover_bg                = 292b34
+preserve_1                            = ffffff

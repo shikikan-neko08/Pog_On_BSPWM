@@ -1,0 +1,104 @@
+<eww>
+    <definitions>
+        <def name="profile">
+            <box orientation="v" space-evenly="true">
+                <box class="pfp"/>
+                <box class="username">r/Unixporn</box>
+                <button onclick="firefox reddit.com/r/unixporn"></button>
+            </box>
+        </def>
+        <def name="date">
+            <box orientation="v" space-evenly="true">
+                <box orientation="h" class="time">
+                    <box class="hour">{{hour}}</box>
+                    <box class="semicolon">:</box>
+                    <box class="minute">{{minute}}</box>
+                </box>
+                <box class="day">{{day}}</box>
+            </box>
+        </def>
+        <def name="player">
+            <box orientation="h" space-evenly="true">
+                <box class="song-art" style="background-image: url('{{art}}');">{{song_art}}</box>
+                <box class="song-data" orientation="v" space-evenly="false">
+                    <box class="song-title">{{song_title}}</box>
+                    <box class="player-btn" orientation="h" halign="center">
+                        <button onclick="playerctl previous"></button>
+                        <button class="pause-play" onclick="playerctl play-pause"></button>
+                        <button onclick="playerctl next"></button>
+                    </box>
+                </box>
+            </box>
+        </def>
+        <def name="background">
+            <box/>
+        </def>
+    <def name="system">
+        <box orientation="v" space-evenly="false">
+            <box class="ram-bar" orientation="h">
+                <box class="label-ram-bar">RAM</box>
+                <scale min="0" max="101" active="false" value="{{used_ram}}"></scale>
+            </box>
+            <box class="cpu-bar" orientation="h">
+                <box class="label-cpu-bar">CPU</box>
+                <scale min="0" max="101" active="false" value="{{brightness}}"></scale>
+            </box>
+            <box class="vol-bar" orientation="h">
+                <box class="label-vol-bar">VOL</box>
+                <scale min="0" max="101" active="false" value="{{volume}}"></scale>
+            </box>
+        </box>
+    </def>
+</definitions>
+
+    <variables>
+        <!-- DATE VARS -->
+        <script-var name="minute" interval="10s">date "+%M"</script-var>
+        <script-var name="hour" interval="5m">date "+%H"</script-var>
+        <script-var name="day" interval="12h">~/.config/eww/scripts/getDay</script-var>
+
+        <!-- PLAYER VARS -->
+        <script-var name="art" interval="5s">~/.config/eww/scripts/echoSongArt</script-var>
+        <script-var name="song_art" interval="5s">~/.config/eww/scripts/getSongArt</script-var>
+        <script-var name="song_title" interval="2s">~/.config/eww/scripts/getSongTitle</script-var>
+
+        <!-- SYSTEM VARS -->
+
+        <script-var name="used_ram" interval="2s">~/.config/eww/scripts/getUsedRam</script-var>
+        <script-var name="volume" interval="1s">~/.config/eww/scripts/getVolume</script-var>
+        <script-var name="brightness" interval="1s">~/.config/eww/scripts/getCpu</script-var>
+    </variables>
+
+    <windows>
+      <window name="background">
+          <geometry x="20px" y="85px" width="350px" height="587px"/>
+          <widget>
+              <background/>
+          </widget>
+      </window>
+        <window name="profile">
+            <geometry x="39px" y="105px" width="310px" height="100px"/>
+            <widget>
+                <profile/>
+            </widget>
+        </window>
+        <window name="date">
+            <geometry x="39px" y="225px" width="300px" height="100px"/>
+            <widget>
+                <date/>
+            </widget>
+        </window>
+        <window name="player">
+            <geometry x="39px" y="560px" width="310px" height="90px"/>
+            <widget>
+                <player/>
+            </widget>
+        </window>
+        <window name="system">
+            <geometry x="39px" y="378px" width="310px" height="160px"/>
+            <widget>
+                <system/>
+            </widget>
+        </window>
+    </windows>
+</eww>
