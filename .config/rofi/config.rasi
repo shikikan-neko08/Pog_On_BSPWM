@@ -18,7 +18,7 @@ configuration {
     display-windowcd: 				"Windowcd";
     display-run: 					"Commands";
     display-ssh: 					"Ssh";
-    display-drun: 					" open  ";
+    display-drun: 					"     ";
     display-combi: 					"Combi";
 }
 
