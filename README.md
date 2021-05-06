@@ -28,5 +28,4 @@ toggle eww close
 
 super + alt +  z
 
-![Awesome to Bspwm](https://user-images.githubusercontent.com/81292558/117104187-aba06200-adb6-11eb-9861-46a5ad9695a5.png)
 ![Awesome to Bspwm](https://user-images.githubusercontent.com/81292558/117302050-3451f780-aeb6-11eb-8f6f-cb25b8ab089c.png)
