@@ -1,5 +1,5 @@
 [Fog]
-main_fg                               = 292b34
+main_fg                               = ffffff
 active_control_fg                     = ffffff
 secondary_fg                          = ffffff
 secondary_bg                          = 292b34
@@ -14,6 +14,7 @@ scrollbar_fg_and_selected_row_bg      = 585e74
 pressing_button_fg                    = ffffff
 pressing_button_bg                    = ffffff
 selected_button                       = 95a9d9
-miscellaneous_bg                      = 292b34
-miscellaneous_hover_bg                = 292b34
+miscellaneous_bg                      = ffffff
+miscellaneous_hover_bg                = ffffff
 preserve_1                            = ffffff
+
