@@ -23,10 +23,13 @@ font [Fira Code](https://github.com/tonsky/FiraCode) [Fontawesome5](https://gith
 
 
 toggle eww
+
 super + z
 
 toggle eww close
+
 super + alt +  z
+
 
 ![Awesome to Bspwm](https://user-images.githubusercontent.com/81292558/117557027-f1f10c00-b0a9-11eb-8c9d-b56b83569e50.png)
 
